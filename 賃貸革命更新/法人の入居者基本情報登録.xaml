@@ -1,0 +1,705 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="法人の入居者基本情報登録" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strCorID" Type="InArgument(x:String)" />
+    <x:Property Name="strFullName" Type="InArgument(x:String)" />
+    <x:Property Name="strKana" Type="InArgument(x:String)" />
+    <x:Property Name="strGender" Type="InArgument(x:String)" />
+    <x:Property Name="strTel" Type="InArgument(x:String)" />
+    <x:Property Name="strComment" Type="InArgument(x:String)" />
+    <x:Property Name="pathLogfile" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1075.2,801.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>法人の入居者基本情報登録_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Flowchart DisplayName="法人の入居者基本情報登録" sap:VirtualizedContainerService.HintSize="673.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <x:Double x:Key="Width">640</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,175.333333333333</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,175.333333333333</av:Point>
+          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Desktop" sap:VirtualizedContainerService.HintSize="641.6,5420.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="600,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;---------入居者情報登録開始---------&quot;]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:AppendLine>
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'FrmKy100 Fk8host'" sap:VirtualizedContainerService.HintSize="600,5235.2" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="ddfaf4e4669804567cb8d25926249e2b" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmKy100' /&gt;">
+          <ui:WindowScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="566.4,5088" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="test" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="524.8,107.2" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition OffsetX="25" OffsetY="1" Position="TopLeft" />
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPageKihon' /&gt;&lt;wnd ctrlname='n3hbxKys' /&gt;&lt;wnd aaname='賃借人' cls='WindowsForms10.Window.*' idx='1' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ClickImage>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;法人ID: &quot;+ strCorID]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="524.8,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;法人ID: &quot;+ strCorID]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="524.8,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[strCorID+ &quot;[k(tab)]&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="095f67903fb11fe536bc6516a74e3497" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPageKihon' /&gt;&lt;wnd ctrlname='n3hbxKys' /&gt;&lt;wnd aaname='賃借人' cls='WindowsForms10.Window.*' idx='1' /&gt;&lt;wnd ctrlname='n3idKysNo1' /&gt;&lt;wnd ctrlname='_inGcNumber' /&gt;&lt;ctrl role='editable text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:TypeInto>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約情報登録'" sap:VirtualizedContainerService.HintSize="524.8,107.2" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALAAAAAiCAYAAAD/GVMWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUJSURBVHhe7ZoxL6xPFMYVFAoKBQmFgoSCkoQEhZKSQuMDUFAqKfgCCo2SkgQJCSUFCYWChEKjUFD4BvPP703O5nnnzqzd+7/FzpriibNnnvecszvP3XPuzLZ8f3+7jIxUkQWckTSygDOSRhZwRtLIAs5IGlnAGUkjCzgjaWQBZySNphHw29ub29vbc9vb2xVcXV1V1rFZh6fPAXtW+dX8f4tqNRhq4YCfatbPwUct8VNB0wj4/v7eTU9Pu76+vgp2dnYq69iTk5Pu/Pzcvb+/V/zY+FhTfswPPj8/3cvLi3t6eori9fXVfX19lZ7b2Nhww8PD7u7uLhpndXXVDQ4OutPT05KfepR/cnLiBgYGCr5ybm9v3dDQkOvs7Cx9Fgb8WkPqaBoBf3x8uJubm+IbyfD8/FxZxz44OHBzc3Nud3e34seen593h4eHJX7MDx4fH93CwoIbGxuLgnV4+pwv4FAcRNbe3u5GRkZKfupRPuvw4CvHBLy8vFz6LAz4s4AbDGxMqFUCa5dw1tbWXHd3t5udna2sY+NjDY61YMS2tbVVfJPi17ZrIhkfH3dLS0uuq6ursPk2BNghkRBTcxGbHPacPUs84qr/+Pi4xA/lhWO1kUtzaw1ZwA0GWry2ScXMzIx7eHgocWijbW1trqenp8SFY6MIG22tGdvikE9FEhKMioS2buMEfsuLbX44lgsh6ghhHOLWM0JoPX78LOAGAy2eb7QQGCsYL5RDG+3v73f7+/slLhwbRRCAtWZsi0O+egRMW7dxAr/lxTY/HMvFPyQdIXQUqWeE0Hr8+FnADQbEp2ODAX+IrwILrQPasbVpFQOoR8Axm/g2omDbGOCPEMYhLn957XO0zlA9Gt+PmTqaQsCItbe39w/gNw5tlG9YwCbSps/OzorX2qaVzynExMREEYd1eH6b/lsBw7OYVleoNgN5Q/H9Oq0e4ujzitD7TRVNPULgN06tbVr5egph7dtv0/9HwDoSxGozkDcU36/T6tHRwkfo/aaKXzNC1Nqm7RRCTyeIZScYiMdEAid2smEC01HBFzC+0EgQqpM4odrU5v1abS0tLdGYWkPq+DUjhMIXkoJTiKmpqeJ5hNHa2uo6OjpKMU0k+EMc7FD8WF78obEBwSm/3tq4hLm4uIiOH+ZLGb9mhFBU20S9EOG0gFMDvRQgpokEf4gTuyyoJuDQ2OCfGNRbW+jiJgu4AcHmcYbrA3+IQ9vlLHZ9ff0PvrVpbBMDmx7zq225YiKp5rd2v7KyUgEiVr7VQK06umj9sdrsWex8CtFgYFNop2yotlf8xtExg/aqfIO2YF8AtdhaT70C/tcjBDGNj60nFZo7dTSNgPViwtorfuMgCNYA7VX5Bm3BPFuvrfXUK+B/PUIQUy9lYr/rSB1NI2Dd6JCoFD5fERMnV7ibm5vu6OgoyrEYsfjV/LWMEIrYe4zVYyMTQld+6mgaAWsL5ncE/E7A31zlx4Rhbddvx8oxPy3ecmGTG/it3xDL6/vtgiMWB9QiYIuDbWMGNr58kdFAYFNowaOjo8U5J3957W+u8mPCoO1eX18XP3z5SSS0eMuFTW7gt35DLK/v55JhcXExGgfUImCLg315eVkAG1++yGgg0Na19Rrwx/i1/E9cx4aQP5TTEIofy+v7NX6szp9qwx/ixGpIFU0h4IzfiyzgjKSRBZyRNLKAM5JGFnBG0sgCzkgaWcAZCePb/QcyzOwBQCsivgAAAABJRU5ErkJggg==" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約情報登録'" sap:VirtualizedContainerService.HintSize="524.8,107.2" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="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" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="tab" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="down" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="down" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Cor of guest name: &quot; + strFullName]" />
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="524.8,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;入居者名: &quot; +strFullName]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+                <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'editable text'" sap:VirtualizedContainerService.HintSize="524.8,135.2" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[strFullName]">
+                  <ui:SetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cddbf75b38340410bbb700bb60990be2" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;wnd ctrlname='_inGcText' /&gt;&lt;ctrl role='editable text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SetValue.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SetValue>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Cor of guest kana: &quot; +strKana]" />
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="524.8,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;カナ: &quot;+strKana]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+                <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'editable text'" sap:VirtualizedContainerService.HintSize="524.8,52.8" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[strKana]">
+                  <ui:SetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2e3dc32b1ea8700b5418e2b48bf3c3a6" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='5' /&gt;&lt;wnd ctrlname='_inGcText' /&gt;&lt;ctrl role='editable text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SetValue.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SetValue>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,52.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <Sequence DisplayName="Select Gender" sap:VirtualizedContainerService.HintSize="524.8,542.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="15452858d030bdcad2c11acb1eba4685" Selector="&lt;wnd omit:ctrlname='pnlMeisai' idx='2' /&gt;&lt;wnd omit:ctrlname='tabMeisai' idx='33' /&gt;&lt;wnd omit:ctrlname='tabPegeSyosai' idx='183' /&gt;&lt;wnd omit:ctrlname='tabSyosai' idx='1' /&gt;&lt;wnd omit:ctrlname='tabPageNyukyosya' idx='72' /&gt;&lt;wnd omit:ctrlname='n3grdNyukyosya' idx='2' /&gt;&lt;wnd omit:cls='WindowsForms10.Window.*' idx='14' /&gt;&lt;wnd ctrlname='_inGcComboBox' /&gt;&lt;ctrl role='combo box' /&gt;&lt;ctrl role='push button' idx='1' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Cor of guest gender : &quot; + strGender]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <If Condition="[String.IsNullOrEmpty(strGender)]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Else>
+                      <If Condition="[strGender.Equals(&quot;1&quot;)]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,320.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;性別: 男&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AppendLine>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="男" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="%[k(up)][k(up)][k(down)][k(enter)]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f47a85173f370b1e59cf4587b6dded83" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='7' /&gt;&lt;wnd ctrlname='_inGcComboBox' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,320.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;性別: 女&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AppendLine>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="女" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="%[k(up)][k(up)][k(down)][k(down)][k(enter)]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f47a85173f370b1e59cf4587b6dded83" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='7' /&gt;&lt;wnd ctrlname='_inGcComboBox' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </If.Else>
+                  </If>
+                </Sequence>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="right" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="524.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="right" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="right" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="right" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="right" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Cor of guess Tel: &quot; + strTel]" />
+                <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="電話番号" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SetValue_3" Text="[strTel]">
+                  <ui:SetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1b2b4b1de641892d4dcb2a53d80b8bac" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='17' /&gt;&lt;wnd ctrlname='_inGcText' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SetValue.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SetValue>
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;電話番号: &quot;+strTel]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SendHotkey>
+                <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="備考入力" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="[strComment]">
+                  <ui:SetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="57a6285fca4fe8dc152e5bf28c1399a2" Selector="&lt;wnd ctrlname='pnlMeisai' /&gt;&lt;wnd ctrlname='tabMeisai' /&gt;&lt;wnd ctrlname='tabPegeSyosai' /&gt;&lt;wnd ctrlname='tabSyosai' /&gt;&lt;wnd ctrlname='tabPageNyukyosya' /&gt;&lt;wnd ctrlname='n3grdNyukyosya' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='19' /&gt;&lt;wnd ctrlname='_inGcText' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SetValue.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SetValue>
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;備考: &quot; +strComment]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約情報登録'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJgAAAAfCAYAAAAbdwRBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUASURBVHhe7ZkxL7RNFIYVFAoKBQmFgoSCkoSCQkmpoPEDKCiVFPwBBYVSS4KEhFZBQqEgoaBQKCj8g/m+60nO5jzjzM56ed53JFPcyThz5sx5Zu/da2c1fXx8uKysqpQNllWpssGyKlU2WFalygbLqlTZYFmV6lcZ7Pz83G1vb7unp6dPc8SYI8efi6nqtV+pH3pG4hsbG3X1J/1XrWQN9vb25h4fH93d3V1NS0tLrr+/3x0eHpbiiBhz5Og4Nahl7SG6vLx0g4ODbnV11ZyvJ2vty8tLqYdYbzpfnvHo6KiW8/7+XtRvaWlxXV1drqenp6TOzk7X3Nz8R/1XrWQNdnt762ZnZ93IyEhNHGZra6sbGhoqxREx5sjRcWpQy9pD9NMG29raKvUQ603n+88oOdTv7e11u7u7xSeVFjHmssG+IN656+vrxTtaNDo66jo6Otz8/HwpjogxR46OU4NavBAWVtDy8nLxKTA1NWXOIwtbSAzGWsk5ODgo9RDrTef7zyg5mId9rq6uzB4GBgaywb4rDjCGyNAhb25uFp8Ovtrb211TU1NNYAiz+XmTk5Pu+vq6qCX4Bm1iMOqMj4+7k5OTIq4RbyGSHOmtUURqg1H/4eGhyKF+X19fNth3xQHGEBk65Pv7+09oQQsLCyWDhTB0cXHhXl9fi1qCb9AmBqPO3t6em5mZKeIa8RYiyZHeGkWkNphVPxvsm+IAY4hs9JDlZke+Rhi4BEuYylqH9PcuPebThrUgT8a6N41IcqQeYyuHsZiK+tpgur5VMxUlazCwwCHyySPiEAUfOo6ICYZ0XBDj1w+ZRI/9NaJYPsjTPTTSG3Xke5Q8O+OJiQl3c3NTjKlxfHxcqqGlsZuKkjWYRkAIH1oWhpAgxq8fMollGF+xfI081Ehv1BGDybMzFjQzDj27SGM3FSVrMAsB/g1Ly0IMoga1dG3wRxwcghVtEtmXcejmKDn+WpkPIQ/puPRGP/omq8fSA/Xle2Kopu4hFf2K72A+MrjNgQNighhizJGj45bIwRSYg78tk/DThL4VStyXtVbHMYDGmODS36u7u7tQW1tb8aMpBuNvjUiJM9bPyF75Z4pvyEIGONCIIcYcOSEsisiJGQwz6FuhxH3FDOZj0brxsZfcVrmN6pusRqTEGYfwKjVTUfIG0zjjAPk9C4EP/m1CXGKIHGKsYa2uBWp2dnaKHOb5HYl4yCTMk0ecdRYuYwbDVIuLizXNzc19whl9+s+1srJS/M2+z8/PRT71/BulPp/9/f1SDykoWYNZWKyHEhE5Fi7BHLgDe+RIfY0tjTONxXq4jBnsJxEpppJ+Tk9Pa+dDjt4/FSVrMAuLvEC8Y5GPEhE5Fi7BHLgDe+RIfY0tjTONRfJDuIwZ7CcRKQaTfqanp0vno/dPRckaTPAU+tiXA+eFtOYRawWFesyc1NfYwgCCMn/fUD8xg+maei8/X6SNVC9O/YH/v3eBVMGozk9FyX8HA0m8Y32BHlADcqx5VO/2pxUySSOKGUzH6cdCpJZvJCtOHXA9NjZWYFRw2ejz/k0lbzCQxO8+vkAPqBkeHjbnUb3bn9bfMhj90K+PSC1tpFCcOoL7s7Ozhm67/0rJGwwkacR8RT7OQorhuJ5Ca624fpbQXsRZxwUkFPdz2GttbS1Y818qeYNl/W5lg2VVqmywrEqVDZZVqbLBsipVNlhWhfpw/wFaK4FpKP+aHgAAAABJRU5ErkJggg==" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ClickImage>
+                <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="AppendLine_9" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;---------入居者情報登録完了---------&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:AppendLine>
+              </Sequence>
+            </ActivityAction>
+          </ui:WindowScope.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:WindowScope>
+      </Sequence>
+    </FlowStep>
+  </Flowchart>
+</Activity>

@@ -1,0 +1,44 @@
+CLIENT_NAME 様　
+
+いつもお世話になっております。
+株式会社FRESHROOMでございます。
+
+INVOICE_MONTH月分の請求書をお送りいたします。
+
+ご確認後、期限までにお振り込みいただきますようお願いいたします。
+請求書の内容にご不明な点がございましたら、その際はお声掛けください。
+
+引き続き何卒よろしくお願いいたします。
+
+
+※ 行き違いでお振込み頂いておりましたら失礼のほどご容赦ください。
+※こちらのメールは、請求書送付用のアドレスになります。請求書関連以外のご質問にはお答えできませんので、ご連絡は弊社担当スタッフまでお願いいたします。
+
+-- 
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+  株式会社FRESHROOM
+  東京都千代田区岩本町2-10-1
+  TEL  03-3851-6707
+  FAX  03-3851-6708
+  HP　http://fresh-room.sakura.ne.jp/
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+
+Dear CLIENT_NAME　
+
+Thank you for choosing our share house.
+ 
+We will send you the invoice of INVOICE_MONTH month.
+Please find it in the attached document.
+ 
+If you have any question or request, please let us know.
+ 
+Thank you.
+
+-- 
+=====================================
+  FRESH ROOM Co.,Ltd.
+  2-10-1 IWAMOTO-CHO, CHIYODA-KU,TOKYO
+  TEL  03-3851-6707
+  FAX  03-3851-6708
+  HP　http://fresh-room.sakura.ne.jp/
+=====================================
