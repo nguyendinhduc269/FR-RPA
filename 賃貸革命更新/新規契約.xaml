@@ -85,7 +85,7 @@
   </sap:WorkflowViewStateService.ViewState>
   <Flowchart DisplayName="新規契約" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="strAgreID" />
+      <Variable x:TypeArguments="x:String" Name="strCAgreID" />
       <Variable x:TypeArguments="x:Boolean" Name="isError" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -107,7 +107,7 @@
           <av:Size x:Key="ShapeSize">200,68.8</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="新規登録" sap:VirtualizedContainerService.HintSize="1485.6,2103.2" sap2010:WorkflowViewState.IdRef="Sequence_67">
+      <Sequence DisplayName="新規登録" sap:VirtualizedContainerService.HintSize="1661.6,3139.2" sap2010:WorkflowViewState.IdRef="Sequence_67">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="isConSendMail" />
         </Sequence.Variables>
@@ -117,7 +117,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="1444,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;---------新規契約登録開始---------&quot;]">
+        <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="1620,52.8" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;---------新規契約登録開始---------&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,7 +125,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:AppendLine>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'FrmMainMe Fk8host'" sap:VirtualizedContainerService.HintSize="1444,52.8" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="50c58091b8f6b31d541aa84936f7571a" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmMainMenu2' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'FrmMainMe Fk8host'" sap:VirtualizedContainerService.HintSize="1620,52.8" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="50c58091b8f6b31d541aa84936f7571a" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmMainMenu2' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -203,13 +203,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:WindowScope>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'FrmMainMe Fk8host'" sap:VirtualizedContainerService.HintSize="1444,1824.8" sap2010:WorkflowViewState.IdRef="WindowScope_14" InformativeScreenshot="706294aa00f3c5720317e5ae52463071" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmMainMenu2' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'FrmMainMe Fk8host'" sap:VirtualizedContainerService.HintSize="1620,2860.8" sap2010:WorkflowViewState.IdRef="WindowScope_14" InformativeScreenshot="706294aa00f3c5720317e5ae52463071" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmMainMenu2' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1410.4,1637.6" sap2010:WorkflowViewState.IdRef="Sequence_66">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1586.4,2673.6" sap2010:WorkflowViewState.IdRef="Sequence_66">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="strKstatus" />
                 </Sequence.Variables>
@@ -219,7 +219,7 @@
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="物件IDや部屋ID入力" sap:VirtualizedContainerService.HintSize="1368.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                <Sequence DisplayName="物件IDや部屋ID入力" sap:VirtualizedContainerService.HintSize="1544.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_68">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -316,7 +316,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:GetValue>
                 </Sequence>
-                <If Condition="[strKstatus.Contains(&quot;新規契約&quot;)]" DisplayName="登録するの部屋が空か確認" sap:VirtualizedContainerService.HintSize="1050.4,1030.4" sap2010:WorkflowViewState.IdRef="If_20">
+                <If Condition="[strKstatus.Contains(&quot;新規契約&quot;)]" DisplayName="登録するの部屋が空か確認" sap:VirtualizedContainerService.HintSize="1544.8,2472" sap2010:WorkflowViewState.IdRef="If_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,17 +324,17 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="新規登録処理" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                    <Sequence DisplayName="新規登録処理" sap:VirtualizedContainerService.HintSize="1196.8,2322.4" sap2010:WorkflowViewState.IdRef="Sequence_59">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="TimeChangerError" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約情報登録'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約情報登録'" sap:VirtualizedContainerService.HintSize="1155.2,52.8" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:ClickImage.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -365,50 +365,57 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ClickImage>
-                      <If Condition="[個人法人種別.Trim.Equals(&quot;個人&quot;)]" DisplayName="法人、個人分別" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_14">
+                      <If Condition="[個人法人種別.Trim.Equals(&quot;個人&quot;)]" DisplayName="法人、個人分別" sap:VirtualizedContainerService.HintSize="1155.2,1951.2" sap2010:WorkflowViewState.IdRef="If_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="個人" sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <Sequence DisplayName="個人" sap:VirtualizedContainerService.HintSize="911.2,1801.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="契約基本情報画面" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="WindowScope_9" InformativeScreenshot="07e439d4d9b04f040b555a574b258f2c" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmKy110' /&gt;">
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="契約基本情報画面" sap:VirtualizedContainerService.HintSize="869.6,1708.8" sap2010:WorkflowViewState.IdRef="WindowScope_9" InformativeScreenshot="07e439d4d9b04f040b555a574b258f2c" Selector="&lt;wnd app='fk8host.exe' ctrlname='FrmKy110' /&gt;">
                               <ui:WindowScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="836,1521.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[String.IsNullOrEmpty(strAgreID)]" DisplayName="Check 契約ID is Empty?" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[strAgreID]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:MessageBox>
+                                    <If Condition="[String.IsNullOrEmpty(strAgreID)]" DisplayName="Check 契約ID is Empty?" sap:VirtualizedContainerService.HintSize="794.4,656.8" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence DisplayName="get new strAgreeID" sap:VirtualizedContainerService.HintSize="242,330" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                        <Sequence DisplayName="get new strAgreeID" sap:VirtualizedContainerService.HintSize="375.2,507.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+                                          <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_2">
                                             <ui:GetFullText.Target>
                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e6b8c6fd1ad16d428614eed278696a60" Selector="&lt;wnd ctrlname='pnlKey' /&gt;&lt;wnd ctrlname='grpKey' /&gt;&lt;wnd ctrlname='n3idKey' /&gt;&lt;wnd ctrlname='_inGcNumber' /&gt;" WaitForReady="COMPLETE">
                                                 <ui:Target.TimeoutMS>
@@ -417,27 +424,27 @@
                                               </ui:Target>
                                             </ui:GetFullText.Target>
                                             <ui:GetFullText.Text>
-                                              <OutArgument x:TypeArguments="x:String">[strAgreID]</OutArgument>
+                                              <OutArgument x:TypeArguments="x:String">[strCAgreID]</OutArgument>
                                             </ui:GetFullText.Text>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:GetFullText>
-                                          <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;新契約ID: &quot;+ strAgreID]">
+                                          <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;新契約ID: &quot;+ strCAgreID]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:AppendLine>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;新契約ID：　&quot;+strAgreID]">
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;新契約ID：　&quot;+strCAgreID]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -445,14 +452,14 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376,422" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,502.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[strAgreID+ &quot;[k(tab)]&quot;]">
+                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[strAgreID+ &quot;[k(tab)]&quot;]">
                                             <ui:TypeInto.Target>
                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="14772ef41c4bc4549403b68f5c8f350f" Selector="&lt;wnd ctrlname='pnlKey' /&gt;&lt;wnd ctrlname='grpKey' /&gt;&lt;wnd ctrlname='n3idKey' /&gt;&lt;wnd ctrlname='_inGcNumber' /&gt;" WaitForReady="COMPLETE">
                                                 <ui:Target.TimeoutMS>
@@ -462,20 +469,20 @@
                                             </ui:TypeInto.Target>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:TypeInto>
-                                          <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                          <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_21">
                                             <Assign.To>
-                                              <OutArgument x:TypeArguments="x:String">[strAgreID]</OutArgument>
+                                              <OutArgument x:TypeArguments="x:String">[strCAgreID]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
                                               <InArgument x:TypeArguments="x:String">[strAgreID]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;契約ID: &quot;+strAgreID]">
+                                          <ui:AppendLine DisplayName="Write Log" FileName="[pathLogfile]" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="[DateTime.Now.ToString+&quot;  &quot;+ &quot;契約ID: &quot;+strCAgreID]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -486,7 +493,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約者情報登録'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'FK8Host.exe  契約者情報登録'" sap:VirtualizedContainerService.HintSize="794.4,52.8" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                                       <ui:ClickImage.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -517,11 +524,11 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:ClickImage>
-                                    <TryCatch DisplayName="個人契約基本情報入力" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                    <TryCatch DisplayName="個人契約基本情報入力" sap:VirtualizedContainerService.HintSize="794.4,539.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <TryCatch.Try>
@@ -557,7 +564,7 @@
                                               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{個人法人種別,strCustomerID,strCorID,strAgreID.Trim}]" DataTable="[dtUploads]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{個人法人種別,strCustomerID,strCorID,strCAgreID.Trim}]" DataTable="[dtUploads]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
                                         </Sequence>
                                       </TryCatch.Try>
                                       <TryCatch.Catches>
@@ -589,8 +596,8 @@
                               </ui:WindowScope.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:WindowScope>
@@ -843,7 +850,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If Condition="[String.IsNullOrEmpty(strComment)]" DisplayName="入金項目はコンビニ支払いに変更" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_23">
+                      <If Condition="[String.IsNullOrEmpty(strComment)]" DisplayName="入金項目はコンビニ支払いに変更" sap:VirtualizedContainerService.HintSize="1155.2,52.8" sap2010:WorkflowViewState.IdRef="If_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1358,7 +1365,7 @@
                           </If>
                         </If.Else>
                       </If>
-                      <If Condition="[isError]" DisplayName="契約基本情報また入居者情報入力エラーが発生するか？" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If Condition="[isError]" DisplayName="契約基本情報また入居者情報入力エラーが発生するか？" sap:VirtualizedContainerService.HintSize="1155.2,52.8" sap2010:WorkflowViewState.IdRef="If_18">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1672,7 +1679,7 @@
                                               <OutArgument x:TypeArguments="x:String">[erroMailBody]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">[errorMailContent.Replace("Houseid",strHouseID).Replace("Roomid",strRoomID).Replace("Argeid",strAgreID).Replace("Corid",strCorID).Replace("Name",strFullName).Replace("Gender",strGender).Replace("Mail",strMail).Replace("From",strFrom).Replace("To",strTo).Replace("errorReason",errorReason)]</InArgument>
+                                              <InArgument x:TypeArguments="x:String">[errorMailContent.Replace("Houseid",strHouseID).Replace("Roomid",strRoomID).Replace("Argeid",strCAgreID).Replace("Corid",strCorID).Replace("Name",strFullName).Replace("Gender",strGender).Replace("Mail",strMail).Replace("From",strFrom).Replace("To",strTo).Replace("errorReason",errorReason)]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[erroMailBody]" DisplayName="Send SMTP Mail Message" Email="[fromMail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendMail_9" IsBodyHtml="True" Password="[passMail]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RPA:新規契約登録中止" To="[toMail]">
@@ -1908,7 +1915,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="806.4,880.8" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                    <Sequence sap:VirtualizedContainerService.HintSize="304,345.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strCTo" />
                         <Variable x:TypeArguments="x:String" Name="strCFrom" />
@@ -1919,7 +1926,7 @@
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="764.8,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[strCTo]</OutArgument>
                         </Assign.To>
@@ -1927,7 +1934,7 @@
                           <InArgument x:TypeArguments="x:String">[Regex.Match(strKstatus.Split("～".ToArray)(1),"(20\d{2})\/(\d{2})\/(\d{2})").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="764.8,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_34">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[strCFrom]</OutArgument>
                         </Assign.To>
@@ -1935,11 +1942,11 @@
                           <InArgument x:TypeArguments="x:String">[Regex.Match(strKstatus.Split("～".ToArray)(0),"(20\d{2})\/(\d{2})\/(\d{2})").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[DateTime.Compare(DateTime.Parse(strFrom),DateTime.Parse(strCTo)) &lt;0]" DisplayName="新規契約期間と存在契約期間を確認" sap:VirtualizedContainerService.HintSize="764.8,588" sap2010:WorkflowViewState.IdRef="If_19">
+                      <If Condition="[DateTime.Compare(DateTime.Parse(strFrom),DateTime.Parse(strCTo)) &lt;0]" DisplayName="新規契約期間と存在契約期間を確認" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="If_19">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
@@ -2100,63 +2107,25 @@
                             </ui:InvokeWorkflowFile>
                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 新規契約 workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="新規契約.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="x:String" x:Key="strHouseID">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strHouseID" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strRoomID">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strRoomID" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strFullName">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strFullName" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strKana">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strKana" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strTel">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTel" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strMail">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strMail" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strComment">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strComment" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strGender">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strGender" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtUploads">
-                                  <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtUploads" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strFrom">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strFrom" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strTo">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTo" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="pathLogfile">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pathLogfile" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strCustomerID">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCustomerID" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="個人法人種別">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="個人法人種別" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strCorID">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCorID" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="strAgreID">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strAgreID" />
-                                </InArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="strStatus">
-                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strStatus" />
-                                </OutArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="strReason">
-                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strReason" />
-                                </OutArgument>
-                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtReport">
-                                  <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtReport" />
-                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strHouseID">[strHouseID]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strRoomID">[strRoomID]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strFullName">[strFullName]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strKana">[strKana]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strTel">[strTel]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strMail">[strMail]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strComment">[strComment]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strGender">[strGender]</InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtUploads">[dtUploads]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strFrom">[strFrom]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strTo">[strTo]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="pathLogfile">[pathLogfile]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strCustomerID">[strCustomerID]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="個人法人種別">[個人法人種別]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strCorID">[strCorID]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="strAgreID">[strCAgreID]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="strStatus">[strStatus]</OutArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="strReason">[strReason]</OutArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtReport">[dtReport]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
